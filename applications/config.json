@@ -1,5 +1,5 @@
 {
-    "peer_name": "peer0.warehouse.nck.com",
+    "peer_name": "peer0.supplier.nck.com",
     "channelid": "nckchannel",
     "use_couchdb":true,
     "create_history_log":true,
