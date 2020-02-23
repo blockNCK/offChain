@@ -97,7 +97,6 @@ exports.processBlockEvent = async function (channelname, block, use_couchdb, nan
 
                         console.log(`Transaction Timestamp: ${writeObject.timestamp}`);
                         console.log(`ChaincodeID: ${writeObject.chaincodeid}`);
-                        console.log(writeObject.values);
                         var time = new Date() - startTime;
                         console.info(`Total eventProcess time: ${time}`);
                         const logfilePath = path.resolve(__dirname, 'nextblock.txt');
