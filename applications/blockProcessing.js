@@ -108,7 +108,10 @@ exports.processBlockEvent = async function (channelname, block, use_couchdb, nan
                         // if couchdb is configured, then write to couchdb
                         if (use_couchdb) {
                             try {
+                                const starTime = new Date();
                                 await writeValuesToCouchDBP(nano, channelname, writeObject);
+                                var endtime = new Date() - starTime;
+                                console.info(`add to couchdb time: ${endtime}`);
                             } catch (error) {
 
                             }
