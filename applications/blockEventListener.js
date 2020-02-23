@@ -83,6 +83,7 @@ let ProcessingMap = new BlockMap()
 
 async function main() {
     const startTime = new Date();
+    const gateway = new Gateway();
     try {
 
         // initialize the next block to be 0
