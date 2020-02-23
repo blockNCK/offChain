@@ -26,6 +26,7 @@ exports.processBlockEvent = async function (channelname, block, use_couchdb, nan
         const blockNumber = block.header.number
 
         console.log(`------------------------------------------------`);
+        const startTime = new Date();
         console.log(`Block Number: ${blockNumber}`);
 
         // reject if the data is not set
@@ -97,7 +98,8 @@ exports.processBlockEvent = async function (channelname, block, use_couchdb, nan
                         console.log(`Transaction Timestamp: ${writeObject.timestamp}`);
                         console.log(`ChaincodeID: ${writeObject.chaincodeid}`);
                         console.log(writeObject.values);
-
+                        var time = new Date() - startTime;
+                        console.info(`Total eventProcess time: ${time}`);
                         const logfilePath = path.resolve(__dirname, 'nextblock.txt');
 
                         // send the object to a log file

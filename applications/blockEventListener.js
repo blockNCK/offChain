@@ -142,7 +142,7 @@ async function main() {
         process.exit(1);
     }
     var time = new Date() - startTime;
-    console.info(`Total execution time: ${time}`);
+    console.info(`Total eventListner time: ${time}`);
 }
 
 // listener function to check for blocks in the ProcessingMap
