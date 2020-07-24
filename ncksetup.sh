@@ -69,7 +69,7 @@ export CHANNEL_NAME=nckchannel
 
 echo "pull latest images for the cli"
 sleep 10
-docker-compose -f docker-compose-cli.yaml up -d
+docker-compose -f docker-compose-cli.yaml -d
 
 sleep 100
 readiness_probe
